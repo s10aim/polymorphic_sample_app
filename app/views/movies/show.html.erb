@@ -2,3 +2,6 @@
 <p>【日時】 <%= l @movie.created_at %></p>
 <p>【投稿】<%= link_to "YouTube動画", @movie.url %></p>
 <p><%= link_to "投稿一覧へ", movies_path %></p>
+<hr>
+<%= render "./comments/form", object: @movie, comment: @comment %>
+<%= render @comments %>
