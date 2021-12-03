@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @object.comments.build(comment_params)
-    if false # comment.save
+    if @comment.save
       redirect_back(fallback_location: @object)
     else
       @post = @movie = @object
