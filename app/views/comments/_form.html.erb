@@ -1,0 +1,5 @@
+<%= form_with model: [object, comment] do |f| %>
+  <%= render 'shared/error_messages', object: comment %>
+  <div><%= f.text_area :body %></div>
+  <%= f.submit "送信" %>
+<% end %>

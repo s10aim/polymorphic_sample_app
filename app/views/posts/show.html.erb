@@ -1,0 +1,7 @@
+<h1>投稿詳細</h1>
+<p>【日時】 <%= l @post.created_at %></p>
+<p>【投稿】<%= @post.body %></p>
+<p><%= link_to "投稿一覧へ", posts_path %></p>
+<hr>
+<%= render "./comments/form", object: @post, comment: @comment %>
+<%= render @comments %>
